@@ -1,0 +1,895 @@
+@import "./variables";
+@import "./mixin";
+html {
+  box-sizing: border-box;
+}
+// Header Section Start
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+header {
+  background: var(--Base-White, #fff);
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+}
+
+.button {
+  @include button(linear-gradient(225deg, #f76680 0%, #57007b 100%));
+  font-weight: $fw-600;
+}
+
+.nav-link {
+  font-size: $fs-16;
+}
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0rem 4.8rem 0rem 0rem;
+  color: $grey-color;
+}
+
+.navbar-brand {
+  padding: 0rem;
+}
+
+.navbar {
+  padding: 1rem 2.5rem;
+}
+
+// Hero Section
+
+.hero-section {
+  padding-block: 6rem;
+}
+
+.hero-section-content {
+  h1 {
+    font-size: $fs-45;
+    line-height: 4.9rem;
+    color: $black-color;
+    font-weight: $fw-300;
+
+    .software {
+      background: $gradiant-color;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .bold {
+      font-weight: $fw-600;
+    }
+  }
+
+  p {
+    font-size: $fs-18;
+    line-height: 2.2rem;
+    padding-block: 1.5rem 2.5rem;
+  }
+
+  button {
+    @include button(#57007b);
+  }
+  button:hover {
+    @include button-hover;
+  }
+}
+
+// Our Services
+
+.Services-section-parent {
+  padding-block: 5rem;
+  background-color: #f9f9ff;
+  position: relative;
+}
+
+.elliapse-background {
+  width: 72px;
+  height: 72px;
+  background: $gradiant-color;
+}
+.position-top {
+  position: absolute;
+  top: -5%;
+  left: 35%;
+  z-index: -1;
+}
+
+.position-bottom {
+  position: absolute;
+  bottom: -5%;
+  left: 10%;
+  z-index: -1;
+}
+
+.our-services {
+  font-size: 3.6rem;
+  text-align: center;
+  font-weight: $fw-700;
+  color: $black-color;
+}
+
+.Service-card {
+  display: inline-block;
+  padding: 2rem 1.6rem;
+  border-radius: 7px;
+  border: 1px solid #f76680;
+  background: #fafafa;
+  /* Card-Shadow */
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+  .Service-card-img {
+    display: inline-block;
+    border-radius: 1px;
+    border: 1px solid #f76680;
+    background: #fafafa;
+    padding: 1.2rem;
+    border-radius: 50%;
+  }
+
+  .Service-card-heading {
+    background: $gradiant-color;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 1.8rem;
+    font-weight: $fw-600;
+    margin-block: 1.5rem 2rem;
+  }
+  .Service-card-para {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: $grey-color;
+    max-width: 300px;
+  }
+}
+
+// Swiper
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-wrapper {
+  margin-top: 7rem;
+}
+.swiper-slide-active {
+  transform: translateY(20%) !important;
+  transition: transform 2s ease;
+}
+.swiper-backface-hidden .swiper-slide {
+  transform: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.swiper-pagination {
+  position: static;
+  margin-top: 8rem;
+}
+.swiper-pagination-bullet-active {
+  background: $gradiant-color;
+}
+
+// Leading Companies
+
+.mar-blk-120 {
+  padding-block: 12rem;
+}
+
+.deco-line {
+  width: 69px;
+  height: 6px;
+  background: $gradiant-color;
+  margin-bottom: 2rem;
+}
+
+.leading-companies-content {
+  padding-right: 9.6rem;
+  h2 {
+    font-size: 3.6rem;
+    font-weight: $fw-400;
+    line-height: 4rem;
+    color: $black-color;
+    span {
+      font-weight: $fw-700;
+    }
+  }
+  .leading-companies-paragrapgh {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    padding-block: 3rem 5rem;
+    span {
+      background: $gradiant-color;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+  .see-information {
+    color: #57007b;
+    font-size: 1.6rem;
+    font-weight: $fw-500;
+  }
+}
+
+//Working With People
+.working-with-people {
+  h2 {
+    font-size: 3.6rem;
+    font-weight: $fw-400;
+    line-height: 4rem;
+    color: $black-color;
+    span {
+      font-weight: $fw-700;
+    }
+  }
+}
+
+.work-with-logo {
+  margin-top: 7.2rem;
+  padding-block: 6rem;
+  background-color: #f9f9ff;
+}
+.animation-companies-section {
+  gap: 7rem;
+  animation: scrollInfinite 30s linear infinite;
+  @keyframes scrollInfinite {
+    0% {
+      transform: translateX(40%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+// Our recent Case studies
+.our-recent-text {
+  padding-block: 8rem 10rem;
+}
+.case-studies-section {
+  background-color: #f1f2ff;
+  border-radius: 10px;
+}
+.case-studies-content {
+  padding: 2rem 5rem 2rem;
+  h2 {
+    font-size: 2.8rem;
+    color: $black-color;
+    font-weight: $fw-600;
+  }
+  p {
+    padding-block: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: $grey-color;
+  }
+}
+.read-more-case {
+  gap: 0.5rem;
+  cursor: pointer;
+  &:hover {
+    transform: translateX(-10px);
+    transition: 0.5s ease-in-out;
+  }
+  span {
+    background: $gradiant-color;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 1.4rem;
+  }
+}
+.bg-green {
+  background-color: #f0fff7;
+}
+.bg-pink {
+  background-color: #fff4f4;
+}
+
+// Building Software
+.build-software {
+  .build-software-img {
+    position: relative;
+    .build-software-img-ellipse {
+      width: 7.2rem;
+      height: 7.2rem;
+      background: var(
+        --Gradient-warning-bg,
+        linear-gradient(225deg, #ffef5e 0%, #f7936f 100%)
+      );
+      position: absolute;
+      top: -5%;
+      left: -5%;
+      z-index: -2;
+    }
+    .build-software-img-ellipse-bottom {
+      width: 4rem;
+      height: 4rem;
+      background: var(
+        --Gradient-Primary-bg,
+        linear-gradient(225deg, #f76680 0%, #57007b 100%)
+      );
+      position: absolute;
+      bottom: -3%;
+      left: 40%;
+      z-index: -2;
+    }
+  }
+  .build-software-content {
+    padding-right: 12rem;
+    h2 {
+      font-size: 2.8rem;
+      font-weight: $fw-600;
+      color: $black-color;
+    }
+    .biuld-software-first-para {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      color: #2d3748;
+      margin-block: 2rem;
+    }
+    .biuld-software-second-para {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      color: #2d3748;
+      span {
+        background: $gradiant-color;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+    }
+    .biuld-software-third-para {
+      border-left: 4px solid;
+      border-image: var(
+          --Gradient-Primary-bg,
+          linear-gradient(219deg, #f76680 0%, #57007b 100%)
+        )
+        1;
+      padding-left: 1rem;
+      font-size: 1.6rem;
+      line-height: 2rem;
+      max-width: 420px;
+      margin-block: 2rem 2.5rem;
+      background: $gradiant-color;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+  }
+}
+.avatar-text {
+  margin-left: 1.5rem;
+  p {
+    font-size: 1.6rem;
+    color: black;
+  }
+  span {
+    color: #718096;
+    font-size: 1.6rem;
+  }
+}
+.build-software-second {
+  margin-block: 10rem;
+  .build-software-content {
+    padding-left: 8rem;
+  }
+}
+.build-software-img {
+  .build-software-img-second-ellipse-top {
+    width: 4rem;
+    height: 4rem;
+    background: var(
+      --Gradient-Primary-bg,
+      linear-gradient(225deg, #f76680 0%, #57007b 100%)
+    );
+    position: absolute;
+    top: -3%;
+    right: -2% !important;
+    z-index: -2;
+  }
+  .build-software-img-second-ellipse-bottom {
+    width: 7rem;
+    height: 7rem;
+    background: var(
+      --Gradient-warning-bg,
+      linear-gradient(225deg, #ffef5e 0%, #f7936f 100%)
+    );
+    position: absolute;
+    bottom: -6%;
+    left: 30%;
+    z-index: -2;
+  }
+  .build-software-img-third-ellipse-top {
+    width: 4rem;
+    height: 4rem;
+    background: var(
+      --Gradient-Primary-bg,
+      linear-gradient(225deg, #f76680 0%, #57007b 100%)
+    );
+    position: absolute;
+    top: -3%;
+    right: 50%;
+    z-index: -2;
+  }
+
+  .build-software-img-third-ellipse-bottom {
+    width: 5rem;
+    height: 5rem;
+    background: var(
+      --Gradient-warning-bg,
+      linear-gradient(225deg, #ffef5e 0%, #f7936f 100%)
+    );
+    position: absolute;
+    bottom: -3%;
+    left: -3%;
+    z-index: -2;
+  }
+}
+
+// Our Design
+.bg-grey-color {
+  background-color: #f7f7fa;
+  margin-top: 12rem;
+  padding-bottom: 6rem;
+}
+.design-parent {
+  .design-child-one {
+    padding: 1.6rem;
+    // background-color: red;
+    .design-card-parent {
+      padding: 3.4rem 1.6rem !important;
+      border: 1px solid #e7daed;
+      background-color: #fafafa;
+      border-radius: 2px;
+
+      .design-card-child-two {
+        h3 {
+          margin-top: 0rem;
+          font-size: 2rem;
+          color: $black-color;
+          font-weight: $fw-600;
+        }
+        p {
+          margin-top: 1rem;
+          font-size: 1.4rem;
+          line-height: 1.8rem;
+          color: $grey-color;
+          span {
+            font-weight: $fw-600;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+.driven {
+  background: var(
+    --Gradient-info-bg,
+    linear-gradient(225deg, #000000 0.01%, #000001 100%)
+  );
+}
+.developing {
+  background: var(
+    --Gradient-info-bg,
+    linear-gradient(225deg, #68dbf2 0.01%, #509cf5 100%)
+  );
+}
+.security {
+  background: var(
+    --Gradient-success-bg,
+    linear-gradient(225deg, #67e9f1 0%, #24e795 100%)
+  );
+}
+.code {
+  background: var(
+    --Gradient-warning-bg,
+    linear-gradient(225deg, #ffef5e 0%, #f7936f 100%)
+  );
+}
+.proven {
+  background: var(
+    --Gradient-tertiary-bg,
+    linear-gradient(224deg, #ff92ae 8.18%, #ff3d9a 95.84%)
+  );
+}
+
+// Tech Stack
+.tech-list {
+  ul {
+    gap: 6rem;
+    .menu-item {
+      font-size: 1.8rem;
+      color: $black-color;
+      border-bottom: 5px solid transparent;
+      padding-bottom: 1rem;
+      cursor: pointer;
+    }
+  }
+  input[type="radio"]:checked + .menu-item {
+    transform: scale(1.05);
+    background: $gradiant-color;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    border-bottom: 5px solid;
+    border-image: linear-gradient(225deg, #f76680, #57007b) 1;
+  }
+}
+.tech-imges-gap {
+  gap: 3rem;
+  margin-top: 4rem;
+}
+.nodes-php {
+  width: 80%;
+  gap: 4rem;
+}
+
+// Alcaline works
+.alcaline-gap {
+  gap: 7rem;
+}
+.alcaline-card {
+  padding: 2.2rem 2.2rem 2.2rem 2.2rem;
+  border-radius: 9px;
+  border: 1px solid #e7daed;
+  background: #fff;
+  max-width: 330px;
+  h2 {
+    font-size: 1.8rem;
+    font-weight: $fw-700;
+    span {
+      background: $gradiant-color;
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      margin-right: 1rem;
+    }
+  }
+  p {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    line-height: 1.8rem;
+    color: #718096;
+    letter-spacing: -0.07px;
+  }
+}
+.alcaline-bottom-div {
+  margin-right: 10rem;
+}
+
+// Featured
+.featured-card-pad-20 {
+  padding-inline: 2rem;
+}
+.feature-card {
+  width: 254px;
+  p {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    color: #2d3748;
+    margin-block: 2rem;
+  }
+}
+
+// Hire The Best Developers
+
+.hire {
+  margin-block: 10rem;
+  border-radius: 20px;
+  background: linear-gradient(225deg, #f1f1f5 0%, #e4ecf7 100%);
+  padding: 9rem 8.4rem;
+  h2 {
+    font-size: 3.6rem;
+    line-height: 4rem;
+    font-weight: $fw-700;
+  }
+  .hire-developer-1 {
+    cursor: pointer;
+    border: none;
+    padding: 1.4rem 2.5rem;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    background: (linear-gradient(225deg, #ffc656 0%, #f16063 100%));
+    color: $white-color;
+    border: 1px solid #fff;
+  }
+}
+.hire-developer-2 {
+  position: relative;
+  img {
+    position: absolute;
+    left: 50%;
+    top: -70px;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+}
+
+// Footer
+
+.footer-one {
+  p {
+    margin-block: 1.4rem 3.6rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    color: #718096;
+    max-width: 350px;
+  }
+}
+.footer-two {
+  h2 {
+    font-size: 1.8rem;
+    color: #4a5568;
+    font-weight: $fw-700;
+  }
+  ul {
+    li {
+      max-width: 260px;
+      font-size: 1.6rem;
+      color: #718096;
+      margin-block: 2rem;
+      &:hover {
+        color: $black-color;
+        cursor: pointer;
+      }
+    }
+  }
+}
+.footer-four {
+  align-self: flex-end;
+  gap: 2rem;
+  .social-circle {
+    cursor: pointer;
+    padding: 1.5rem;
+    border-radius: 50%;
+    background-color:  #fafafa;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+    &:hover{
+      background-color: rgb(238, 232, 232);
+      transition: all 0.5s ease-in-out;
+    }
+    img {
+      cursor: pointer;
+    }
+  }
+}
+.footer-hr {
+  margin-block: 8rem 5rem;
+}
+.Copyright {
+  font-size: 1.4rem;
+  color: #4a5568;
+  text-align: center;
+  margin-bottom: 4.2rem;
+}
+// Media Query
+
+@media (max-width: 991px) {
+  // Container
+
+  .container {
+    padding-inline: 2rem !important;
+  }
+
+  // header
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem 0rem;
+    text-align: center;
+  }
+
+  .navbar {
+    padding: 1rem 2rem;
+  }
+
+  // Hero Section
+
+  .hero-section {
+    padding-block: 2rem;
+  }
+
+  .hero-section-content {
+    padding-block: 2rem;
+    text-align: center;
+    h1 {
+      font-size: $fs-30;
+      line-height: 3.4rem;
+    }
+    p {
+      font-size: $fs-16;
+      line-height: 2.2rem;
+      padding-block: 1rem 1.5rem;
+    }
+  }
+
+  // Our Service
+
+  .Services-section-parent {
+    padding: 3rem;
+  }
+  .our-services {
+    font-size: 2.4rem;
+  }
+
+  // Leading Companies Section Start
+
+  .leading-companies-content {
+    padding-right: 0rem;
+  }
+  .leading-companies-content {
+    h2 {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
+    .leading-companies-paragrapgh {
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      padding-block: 2rem;
+    }
+  }
+  .mar-blk-120 {
+    padding-block: 6rem;
+  }
+  .leading-companies-gap {
+    gap: 2rem;
+  }
+  .working-with-people {
+    h2 {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+    }
+  }
+
+  // Swiper
+
+  .swiper-wrapper {
+    margin-top: 0rem;
+  }
+  // Working With
+  .work-with-logo {
+    margin-top: 3rem;
+    padding-block: 2rem;
+    background-color: #f9f9ff;
+  }
+
+  .animation-companies-section {
+    animation: none;
+    gap: 2rem;
+  }
+
+  // Our recent Case studies
+  .our-recent-text {
+    padding-block: 5rem;
+  }
+  .case-studies-section {
+    gap: 2rem;
+  }
+  .case-studies-content {
+    padding: 2rem 1rem;
+  }
+
+  // Building Software
+  .build-software {
+    .build-software-content {
+      padding-right: 0rem;
+    }
+  }
+  .build-software-img {
+    margin-top: 4rem;
+  }
+  .build-software .build-software-img .build-software-img-ellipse {
+    width: 4.2rem;
+    height: 4.2rem;
+  }
+  .build-software .build-software-img .build-software-img-ellipse-bottom {
+    bottom: -5%;
+  }
+  .build-software-second .build-software-content {
+    padding-left: 0rem;
+  }
+  .build-software-img .build-software-img-second-ellipse-top {
+    top: -5%;
+    right: -5% !important;
+  }
+  .build-software-img .build-software-img-second-ellipse-bottom {
+    width: 5rem;
+    height: 5rem;
+    bottom: -6%;
+  }
+  .build-software-img-third-ellipse-top {
+    width: 4rem;
+    height: 4rem;
+    top: -5%;
+  }
+  .build-software-img .build-software-img-third-ellipse-bottom {
+    width: 4rem;
+    height: 4rem;
+    bottom: -4%;
+    left: -5%;
+  }
+  // Our Design
+  .design-parent .design-child-one .design-card-parent {
+    padding: 1.6rem;
+  }
+  .design-parent .design-child-one {
+    padding: 1rem 1.6rem 1.6rem 0rem;
+  }
+
+  .design-parent
+    .design-child-one
+    .design-card-parent
+    .design-card-child-two
+    h3 {
+    margin-top: 1rem;
+  }
+
+  // Tech Stack
+  .tech-list {
+    ul {
+      gap: 2rem;
+    }
+  }
+  .nodes-php {
+    width: 100%;
+    gap: 2rem;
+  }
+
+  // Alcaline works
+  .alcaline-gap {
+    gap: 2rem;
+  }
+  .alcaline-bottom-div {
+    margin-right: 0rem;
+  }
+
+  // Featured
+  .featured-card-pad-20 {
+    gap: 3rem;
+  }
+
+  // Hire The Best Developers
+
+  .hire {
+    margin-block: 4rem;
+    padding: 3rem;
+    gap: 2rem;
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  .hire-developer-2 {
+    margin-block: 7rem;
+  }
+  .footer-gap {
+    gap: 3rem;
+  }
+  .footer-four {
+    align-self: flex-start;
+  }
+  .footer-hr {
+    margin-block: 5rem 3rem;
+}
+}
